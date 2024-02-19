@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="background-color: #f2f2f2;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 top-image-container" style="height: 25vh; position: relative;">
+                <div class="top-image" style="background-image: url('hospital_image.jpg'); background-size: cover; background-position: center; filter: blur(5px); width: 100%; height: 100%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: transparent; padding: 10px 0;">
+        <div class="container">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link btn btn-transparent btn-brown mx-2 text-center" href="schedule.html">Schedule Appointment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-transparent btn-brown mx-2 text-center" href="appointment.html">View Appointment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-transparent btn-brown mx-2 text-center" href="doc_info.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-transparent btn-brown mx-2 text-center" href="profile.html">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-transparent btn-brown mx-2 text-center" href="feedback.html">Feedback</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="content" style="background-color: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 10px; margin: 20px;">
+            <h1 class="text-center">Welcome to the Home Page</h1>
+            <div class="user-info text-center">
+                <script>
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const email = urlParams.get("email");
+                    
+                    if (email) {
+                        sessionStorage.setItem("userEmail", email);
+                    }
+
+                    const storedEmail = sessionStorage.getItem("userEmail");
+                    if (storedEmail) {
+                        document.write("Logged in as: " + storedEmail);
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        .btn-transparent {
+            background-color: transparent;
+            border-color: #8B4513; 
+        }
+        .btn-brown {
+            color: #8B4513; 
+        }
+        .btn-brown:hover {
+            background-color: #8B4513; 
+            color: #fff;
+        }
+    </style>
+</body>
+</html>

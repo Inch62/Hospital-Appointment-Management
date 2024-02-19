@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('doctor.jpg') center/cover fixed no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            width: 300px;
+            margin: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .card h2 {
+            text-align: center;
+        }
+
+        .details {
+            margin-top: 20px;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .transparent-button {
+            background: transparent;
+            border: 2px solid #007BFF;
+            color: #007BFF;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 50%;
+            }
+			.card img {
+            max-width: 100%;
+			max-height:100%;
+            
+            border-radius: 8px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">About our Doctors</h1>
+    <div class="container">
+        <div class="card">
+            <img src="doc5.jpg" alt="Doctor 1">
+            <h2>Doctor 1</h2>
+            <div class="details">
+                <p>Specialty: Cardiologist</p>
+                <p>Experience: 10 years</p>
+                <p>Location: Banglore</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="doc2.jpg" alt="Doctor 2">
+            <h2>Doctor 2</h2>
+            <div class="details">
+                <p>Specialty: Dermatologist</p>
+                <p>Experience: 8 years</p>
+                <p>Location: Delhi</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="doc3.jpg" alt="Doctor 3">
+            <h2>Doctor 3</h2>
+            <div class="details">
+                <p>Specialty: Pediatrician</p>
+                <p>Experience: 12 years</p>
+                <p>Location: udupi</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="doc4.jpg" alt="Doctor 4">
+            <h2>Doctor 4</h2>
+            <div class="details">
+                <p>Specialty: Orthopedic Surgeon</p>
+                <p>Experience: 15 years</p>
+                <p>Location: Mumbai</p>
+            </div>
+        </div>
+    </div>
+    <a href="home.html" class="transparent-button">Go to Homepage</a>
+</body>
+</html>
